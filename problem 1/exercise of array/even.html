@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even number </title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        function evenNumber(number) {
+            let evenArray = [];
+            for (let i = 0; i < number.length; i++) {
+                let element = number[i]
+                if (element % 2 === 0) {
+                    evenArray.push(element);
+                }
+            }
+            return evenArray;
+        }
+        let age = [12, 21, 23, 32, 43, 34];
+        let number = evenNumber(age);
+        console.log('the even number array is : ', number);
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

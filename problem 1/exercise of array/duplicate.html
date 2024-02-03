@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove duplicates </title>
+</head>
+
+<body>
+    <script>
+
+        function removeDuplicates(number) {
+            let uniqueArray = [];
+            for (let i = 0; i < number.length; i++) {
+                let element = number[i];
+                if (uniqueArray.indexOf(element) === -1) {
+                    uniqueArray.push(element);
+                }
+            }
+            return uniqueArray
+        }
+        const arrayRemoveDuplicates = [1, 2, 3, 2, 4, 1, 3, 5, 6]
+        const number = removeDuplicates(arrayRemoveDuplicates);
+        console.log(number);
+
+
+
+        function removeDuplicates1(number) {
+            let uniqueArray = [];
+            let i = 0;
+            while (i < number.length) {
+                let element = number[i];
+                if (uniqueArray.indexOf(element) === -1) {
+                    uniqueArray.push(element);
+                }
+                i++
+            }
+            return uniqueArray
+
+        }
+        const arrayRemoveDuplicates1 = [1, 2, 3, 2, 4, 1, 3, 5, 6]
+        const number1 = removeDuplicates1(arrayRemoveDuplicates);
+        console.log(number1);
+
+    </script>
+</body>
+
+</html>

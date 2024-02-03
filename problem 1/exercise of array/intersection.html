@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intersection</title>
+</head>
+
+<body>
+    <script>
+
+        function intersection(array1, array2) {
+            // console.log(array1, array2);
+            let intersectionArray = [];
+            for (let i = 0; i < array1.length; i++) {
+                let element = array1[i];
+                if (array2.includes(element)) {
+                    intersectionArray.push(element);
+
+                }
+            }
+            return intersectionArray;
+        }
+        let array1 = [1, 2, 3, 4, 7, 9];
+        let array2 = [1, 4, 5, 6, 7, 8, 9, 3];
+        let intersectionArray = intersection(array1, array2);
+        console.log(array1, 'and', array2, ' this two arrays intersection is :', intersectionArray);
+
+
+
+    </script>
+</body>
+
+</html>

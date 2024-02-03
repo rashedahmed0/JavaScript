@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Array</title>
+</head>
+
+<body>
+    <script>
+
+        function arraySum(age) {
+            let sum = 0;
+            for (let i = 0; i < age.length; i++) {
+                let element = age[i];
+                sum = sum + element;
+            }
+            return sum;
+
+
+
+        }
+        let age = [12, 23, 43, 22, 34, 55];
+        let arr = arraySum(age);
+        console.log('the sum of array use for loop is :', arr);
+
+
+        function arraySum1(age1) {
+            let sum = 0;
+            let i = 0;
+            while (i < age1.length) {
+                let element = age1[i];
+                sum = sum + element;
+                i++
+            }
+            return sum;
+
+
+        }
+        let age1 = [12, 32, 34, 22, 13];
+        let arr1 = arraySum1(age1);
+        console.log('the sum of array use while loop is : ', arr1);
+
+
+
+    </script>
+</body>
+
+</html>

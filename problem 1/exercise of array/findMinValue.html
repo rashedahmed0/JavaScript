@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find min value</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+
+        function minValue(number) {
+            let minValue = number[0];
+            for (let i = 0; i < number.length; i++) {
+                let element = number[i];
+                if (element < minValue) {
+                    minValue = element;
+                }
+            }
+            return minValue
+        }
+        let age = [6, 7, 4, 5, 3, 9, 1];
+        let number = minValue(age);
+        console.log('the minmum number using for loop is :', number);
+
+        function minValue1(number) {
+            let minnumber = number[0];
+            let i = 0;
+            while (i < number.length) {
+                let element = number[i];
+                if (element > minnumber) {
+                    minnumber = element;
+                }
+                i++
+            }
+            return minnumber;
+
+        }
+        let age1 = [6, 7, 4, 5, 3, 9, 1];
+        let number1 = minValue1(age1);
+        console.log('the minimum number using while loop is : ', number1);
+
+
+
+
+    </script>
+</body>
+
+</html>
