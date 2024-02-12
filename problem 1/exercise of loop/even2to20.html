@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number </title>
+</head>
+
+<body>
+    <script>
+
+        function evenNumber(number) {
+            let evenArray = [];
+            let i = 1;
+            while (i <= number) {
+                if (i % 2 === 0) {
+                    evenArray.push(i);
+                }
+                i++
+            }
+            return evenArray
+        }
+
+
+        let userNumber = prompt('enter your number :');
+        let intNumber = parseInt(userNumber);
+        let number = evenNumber(intNumber);
+        console.log(number);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication </title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+
+
+
+        function multiplivation(number) {
+            // let multiplivation = 1;
+            let multiplivation = number;
+            for (let i = 1; i <= 10; i++) {
+                multiplivation *= i;
+            }
+            return multiplivation;
+        }
+        let userInput = prompt('enter your number : ');
+        let intNumber = parseInt(userInput);
+        let number = multiplivation(intNumber);
+        console.log(number);
+
+
+
+    </script>
+
+</body>
+
+</html>

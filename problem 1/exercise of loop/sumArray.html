@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of array</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function sumOfArray(number) {
+            let sum = 0;
+            for (let i = 0; i < number.length; i++) {
+                let element = number[i];
+                sum += element;
+
+            }
+            return sum;
+
+        }
+        let age = [10, 23, 45, 33, 23];
+        let number = sumOfArray(age)
+        console.log(number);
+    </script>
+</body>
+
+</html>
