@@ -26,3 +26,7 @@ classValue.add('bg-color')
 // remove
 classValue.remove('bg-red')
 // console.log(classValue);
+
+
+const element = document.getElementById('content-id');
+element.setAttribute('title', 'show the info')
