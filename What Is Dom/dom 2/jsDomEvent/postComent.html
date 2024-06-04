@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsum sapiente id vitae reprehenderit
+            optio ab autem eos unde pariatur inventore sed voluptatum laudantium, vel, natus, assumenda ad. Assumenda,
+            quam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsum sapiente id vitae reprehenderit
+            optio ab autem eos unde pariatur inventore sed voluptatum laudantium, vel, natus, assumenda ad. Assumenda,
+            quam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsum sapiente id vitae reprehenderit
+            optio ab autem eos unde pariatur inventore sed voluptatum laudantium, vel, natus, assumenda ad. Assumenda,
+            quam.</p>
+    </section>
+    <textarea name="" id="input-text"></textarea>
+    <button id="post">post</button>
+
+
+
+
+
+
+
+
+    <script>
+        // step 1 addeventlistener
+        document.getElementById('post').addEventListener('click', function () {
+            // step 2 take the input value
+            const textElement = document.getElementById('input-text');
+            const textValue = textElement.value;
+
+            // step 3 where add commnet 
+            const commentSection = document.getElementById('container');
+
+            const commnet = document.createElement('p');
+            commnet.innerText = textValue;
+
+            commentSection.appendChild(commnet);
+            textElement.value = '';
+
+        })
+    </script>
+</body>
+
+</html>

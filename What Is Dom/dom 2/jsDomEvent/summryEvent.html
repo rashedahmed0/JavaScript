@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="headingTag1">befor changing heading tag </h1>
+    <button onclick="clickChage()">click to change</button>
+    <button id="change">change to click</button>
+
+
+    <section id="change-text-using-input">
+        <p id="text">Default input text </p>
+        <input type="text" id="input-Text">
+        <br>
+        <button id="submit"> submit</button>
+    </section>
+
+
+
+
+
+    <script>
+        function clickChage() {
+            const changeToClick = document.getElementById('headingTag1');
+            changeToClick.innerText = 'change by function '
+        }
+
+
+
+
+        document.getElementById('change').addEventListener('click', function () {
+            const changeToClick = document.getElementById('headingTag1');
+            changeToClick.innerText = 'change by addeventlidtenaer '
+        })
+
+
+        document.getElementById('submit').addEventListener('click', function () {
+            const inputElement = document.getElementById('input-Text');
+            const inputValue = inputElement.value;
+            const inputHeading = document.getElementById('text');
+            inputHeading.innerText = inputValue;
+            inputElement.value = '';
+
+        })
+
+    </script>
+</body>
+
+</html>
