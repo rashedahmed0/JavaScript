@@ -8,20 +8,162 @@
 </head>
 
 <body id="body">
+    <h3>onclick button event </h3>
+
+    <!-- onclick event -->
     <button onclick="makeBule()" id="make-blue">make blue</button>
+    <!-- addEventListener event -->
     <button id="make-totamo">make tomato </button>
+
+    <br>
+    <!-- more event handlers  -->
+    <div>
+        <h3>keyup event </h3>
+        <input type="text" id="text-input">
+        <br>
+        <h3>focus event</h3>
+        <input type="text" id="text-area">
+        <br>
+        <h3>mouseover event</h3>
+        <input type="text" id="text-field">
+    </div>
+    <div id="change-text-container">
+        <h1 id="change-text">default h1 tag </h1>
+        <button id="change-btn">click to change the text</button>
+        <button id="previous-text">click to get previous text</button>
+
+    </div>
+
+    <div>
+        <!-- input value to change h1 text  -->
+        <h1 id="input-text-chage">this heading change by input value </h1>
+        <input type="text" id="input-value-text">
+        <button id="input-value-btn">chnage</button>
+
+    </div>
+
+    <section id="comment">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, molestiae?</p>
+        <p>Similique, quos. Excepturi natus libero dolore. Ab et suscipit temporibus?</p>
+        <p>Voluptatem, molestias enim deserunt quam vel laudantium sunt autem veniam.</p>
+        <p>Provident fugiat dicta asperiores quidem veritatis consequuntur expedita cupiditate atque!</p>
+    </section>
+    <textarea name="" id="comment-input"></textarea>
+    <button id="post-btn">post</button>
+
+    <div>
+        <!-- delete  -->
+        <h1 id="h1-delete">this is should to be delete</h1>
+        <input type="text" id="text-delte">
+        <button id="delete" disabled>delete</button>
+    </div>
+
+
+
+    <section>
+        <ul id="container">
+            <li class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, maxime?</li>
+            <li class="item">Doloribus, aspernatur rerum illo aliquid error placeat repellendus minus ducimus!</li>
+            <li class="item">Consequatur, iste. Dolorem ullam aspernatur eligendi fugit consectetur amet quasi?</li>
+            <li class="item">Ipsa excepturi cumque repellat debitis quidem repellendus dolores iusto nisi!</li>
+        </ul>
+
+        <input type="text" name="" id="input-add">
+        <button id="add">add</button>
+    </section>
 
 
 
     <script>
+        document.getElementById('container').addEventListener('click', function () {
+            event.target.parentNode.removeChild(event.target)
+        })
+        document.getElementById('add').addEventListener('click', function () {
+            const input = document.getElementById('input-add');
+            const inputValue = input.value;
+            const li = document.createElement('li');
+            li.innerText = inputValue;
+            const container = document.getElementById('container');
+            container.appendChild(li);
+            input.value = '';
+
+        })
+
+        document.getElementById('text-delte').addEventListener('keyup', function () {
+            const inputVlue = event.target.value;
+            const deleteBtn = document.getElementById('delete');
+            if (inputVlue === 'delete') {
+                deleteBtn.removeAttribute('disabled')
+            }
+            else {
+                deleteBtn.setAttribute('disabled', true)
+            }
+        })
+        document.getElementById('delete').addEventListener('click', function () {
+            const heading = document.getElementById('h1-delete');
+            heading.style.display = 'none';
+        })
+
+
+        document.getElementById('post-btn').addEventListener('click', function () {
+            const inputText = document.getElementById('comment-input');
+            const inputTextValue = inputText.value;
+            const p = document.createElement('p');
+            p.innerText = inputTextValue;
+            const commnetSection = document.getElementById('comment');
+            commnetSection.appendChild(p);
+            inputText.value = '';
+
+        })
+
+
+
+        document.getElementById('input-value-btn').addEventListener('click', function () {
+            const inputText = document.getElementById('input-value-text');
+            const inputTextValue = inputText.value;
+            const h1text = document.getElementById('input-text-chage');
+            h1text.innerText = inputTextValue;
+
+        })
+
+        // onclick event
         function makeBule() {
             document.body.style.backgroundColor = 'blue';
 
+
         }
-
-
+        // addEventListener event 
         document.getElementById('make-totamo').addEventListener('click', function () {
             document.getElementById('body').style.backgroundColor = 'tomato'
+        })
+
+
+
+
+
+        // more event handlers 
+        document.getElementById('text-input').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        })
+        document.getElementById('text-area').addEventListener('focus', function () {
+            console.log('event focus is triggered ');
+        })
+        document.getElementById('text-field').addEventListener('mouseover', function () {
+            console.log('event focus is triggered ');
+        })
+
+
+
+        // change text 
+
+        document.getElementById('change-btn').addEventListener('click', function () {
+            const h1Text = document.getElementById('change-text');
+            previosText = h1Text.innerText;
+            h1Text.innerText = 'this is the dynamic h1 tag';
+        })
+        document.getElementById('previous-text').addEventListener('click', function () {
+            const text = document.getElementById('change-text');
+            text.innerText = 'new text to change ';
         })
     </script>
 </body>
