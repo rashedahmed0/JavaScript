@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creaete element </title>
+</head>
+
+<body>
+    <main id="container">
+        <section id="section-container">
+            <ul id="list">
+                <li class="item">list item 1</li>
+                <li class="item">list item 2</li>
+                <li class="item">list item 3</li>
+                <li class="item">list item 4</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <script>
+        const list = document.getElementById('list');
+        const li = document.createElement('li');
+        li.innerText = 'new dynamic li';
+        list.appendChild(li);
+
+
+        const container = document.getElementById('container');
+        const section = document.createElement('section');
+        section.innerHTML = `
+        <h1>new dynamic sction</h1>
+        <ul>
+            <li>new li 1 </li>
+            <li>new li 2</li>
+            <li>new li 3</li>
+            <li>new li 4</li>
+            <li>new li 5</li>
+            
+            </ul>
+        `
+        container.appendChild(section)
+
+
+    </script>
+</body>
+
+</html>

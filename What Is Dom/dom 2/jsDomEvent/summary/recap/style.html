@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="container">
+        <h1>list container title-1</h1>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Odio, beatae magni?</li>
+            <li class="item">Natus, dolorum corporis!</li>
+            <li class="item">Maxime, debitis quasi?</li>
+        </ul>
+    </section>
+    <section id="container">
+        <h1>list container title-2</h1>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Corporis, enim dolor.</li>
+            <li class="item">Iusto, consequuntur aperiam.</li>
+            <li class="item">Nam, magni fuga?</li>
+        </ul>
+    </section>
+    <section id="container">
+        <h1>list container title-3</h1>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Veritatis, quaerat repellendus!</li>
+            <li class="item">Ea, qui ullam.</li>
+            <li class="item">Incidunt, ex sed!</li>
+        </ul>
+    </section>
+    <section id="container">
+        <h1>list container title-4</h1>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Laboriosam, unde cumque.</li>
+            <li class="item">Explicabo, quod culpa?</li>
+            <li class="item">Consequatur, quidem! Deserunt.</li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        let sections = document.getElementsByTagName('section');
+        for (const section of sections) {
+            section.style.border = '2px solid red'
+            section.style.padding = '10px'
+            section.style.margin = '10px'
+            section.style.borderRadius = '10px'
+        }
+        let lis = document.getElementsByClassName('item');
+        for (const li of lis) {
+            li.style.listStyle = 'none';
+        }
+    </script>
+</body>
+
+</html>

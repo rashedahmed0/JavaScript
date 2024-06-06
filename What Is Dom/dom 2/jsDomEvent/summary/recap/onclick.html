@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+
+<body>
+    <button id="make-blue">make blue </button>
+    <button onclick=" makePink()">make pink</button>
+
+    <script>
+        function makePink() {
+            document.body.style.backgroundColor = 'pink';
+        }
+        document.getElementById('make-blue').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'blue'
+        })
+    </script>
+</body>
+
+</html>

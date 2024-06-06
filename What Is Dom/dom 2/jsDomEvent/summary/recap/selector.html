@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector
+    </title>
+</head>
+
+<body>
+    <section id="main-container">
+        <ul id="list-container">
+            <li class="item">item1</li>
+            <li class="item">item2</li>
+            <li class="item">item3</li>
+            <li class="item">item4</li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        const sections = document.getElementsByTagName('section');
+
+
+        const ul = document.getElementById('list-container');
+        console.log(ul);
+
+        const lis = document.getElementsByClassName('item');
+        for (const li of lis) {
+            console.log(li);
+        }
+        const allLi = document.querySelectorAll('.item');
+        for (const li of allLi) {
+            console.log(li.innerText);
+        }
+
+        // console.log(lis);
+    </script>
+</body>
+
+</html>
