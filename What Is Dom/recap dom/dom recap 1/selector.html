@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section id="container1">
+            <h1 id="section-title1">section title h1 heading tag</h1>
+            <ul id="list1">
+                <li class="item">Lorem ipsum dolor sit.</li>
+                <li class="item">Commodi, voluptates fugit! Optio.</li>
+                <li class="item">Impedit porro culpa consectetur!</li>
+                <li class="item">Deleniti optio ducimus fugiat.</li>
+                <li class="item">Vel consectetur exercitationem fugit?</li>
+            </ul>
+        </section>
+        <section id="container2">
+            <h1 id="section-title2">section title h1 heading tag</h1>
+            <ul id="list2">
+                <li class="item">Lorem ipsum dolor sit.</li>
+                <li class="item">Magni itaque deleniti ab.</li>
+                <li class="item">Est perspiciatis ut ratione.</li>
+                <li class="item">Odit corrupti nostrum quam?</li>
+                <li class="item">Aliquid quia ipsam pariatur.</li>
+            </ul>
+        </section>
+        <section id="container3">
+            <h1 id="section-title3">section title h1 heading tag</h1>
+            <ul id="list3">
+                <li class="item">Lorem ipsum dolor sit.</li>
+                <li class="item">Ad nihil omnis cum.</li>
+                <li class="item">Fuga praesentium consequuntur ad.</li>
+                <li class="item">Deserunt consequuntur inventore omnis.</li>
+                <li class="item">Perferendis, aut! Architecto, inventore!</li>
+            </ul>
+        </section>
+        <section id="container4">
+            <h1 id="section-title4">section title h1 heading tag</h1>
+            <ul id="list4">
+                <li class="item">Lorem ipsum dolor sit.</li>
+                <li class="item">Reiciendis necessitatibus iusto quas.</li>
+                <li class="item">Ullam omnis voluptatibus perspiciatis?</li>
+                <li class="item">Molestiae fugit ab aperiam!</li>
+                <li class="item">Repellendus tenetur iste perspiciatis.</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script>
+        // selector 
+
+
+
+        // getElementByTagName 
+
+        const sections = document.getElementsByTagName('section');
+        // console.log(sections);
+        for (const section of sections) {
+            // console.log(section);
+        }
+
+
+        // getElementsByClassName 
+        const lis = document.getElementsByClassName('item');
+        console.log(lis);
+        for (const li of lis) {
+            console.log(li);
+        }
+
+
+        // getElementByid
+        const ul = document.getElementById('list1')
+        console.log(ul);
+
+
+        // querySelector 
+        const firstLi = document.querySelector('.item');
+        console.log(firstLi);
+
+        // querySelectorAll
+
+        const allSection = document.querySelectorAll('section')
+        console.log(allSection);
+    </script>
+
+
+
+</body>
+
+</html>
