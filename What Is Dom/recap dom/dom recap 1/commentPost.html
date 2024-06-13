@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commnet post </title>
+</head>
+
+<body>
+    <section id="commnet-conainer">
+        <div id="commnet">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, et!</p>
+            <p>At consequuntur deleniti ea id aspernatur inventore assumenda, aut temporibus!</p>
+            <p>Ipsam quam ducimus unde optio maiores est sit molestiae voluptatum.</p>
+            <p>Numquam soluta impedit dolorum omnis? Voluptas non fugiat praesentium eum!</p>
+            <p>Qui consequatur sit nihil esse maiores nostrum cumque obcaecati odit.</p>
+            <p>Corporis at voluptate dolore officia consequatur cumque ratione saepe suscipit.</p>
+        </div>
+        <textarea name="" id="input-text"></textarea>
+        <button id="post-btn">Post</button>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('post-btn').addEventListener('click', function () {
+            // console.log('click event triggered');
+
+            const commnet = document.getElementById('commnet');
+            const input = document.getElementById('input-text');
+            const inputValue = input.value;
+            // console.log(inputValue);
+            const p = document.createElement('p');
+            p.innerText = inputValue;
+            // console.log(p);
+            commnet.appendChild(p);
+            input.value = '';
+
+
+        })
+    </script>
+</body>
+
+</html>

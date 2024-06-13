@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="focus-input" placeholder="focus event">
+    <input type="text" id="blus-input" placeholder="blur event">
+    <input type="text" id="mourse-input" placeholder="mourse event">
+    <input type="text" id="key-input" placeholder="key event">
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('focus-input').addEventListener('focus', function () {
+            console.log('event focus are triggred ');
+        })
+        document.getElementById('blus-input').addEventListener('blur', function () {
+            console.log('event blur is triggered ');
+        })
+        document.getElementById('mourse-input').addEventListener('mouseover', function () {
+            console.log('event mouseover is triggered');
+        })
+        document.getElementById('key-input').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+
+<body>
+    <h1 id="title">this heading tag use for delete </h1>
+    <input type="text" id="input">
+    <button id="delete" disabled>Delete</button>
+
+
+
+    <script>
+        document.getElementById('input').addEventListener('keyup', function (event) {
+            const input = document.getElementById("delete");
+            if (event.target.value === 'delete') {
+                input.removeAttribute('disabled')
+            }
+            else {
+                input.setAttribute('disabled', 'true');
+            }
+        })
+        document.getElementById('delete').addEventListener('click', function () {
+            const h1 = document.getElementById('title');
+            h1.style.display = 'none';
+            document.getElementById('input').value = '';
+        })
+    </script>
+</body>
+
+</html>
