@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="container">
+        <ul id="list">
+            <li class="item">list item </li>
+            <li class="item">list item </li>
+            <li class="item">list item </li>
+            <li class="item">list item </li>
+            <li class="item">list item </li>
+            <li class="item">list item </li>
+        </ul>
+    </section>
+    <input type="text" id="input">
+    <button id="btn">Add </button>
+
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('list').addEventListener('click', function (event) {
+            event.target.style.display = 'none';
+
+        })
+
+        document.getElementById('btn').addEventListener('click', function () {
+            const input = document.getElementById('input');
+            const inputValue = input.value;
+            const list = document.getElementById('list');
+            const li = document.createElement('li');
+            li.innerText = inputValue;
+            list.appendChild(li);
+            input.value = '';
+        })
+    </script>
+</body>
+
+</html>
