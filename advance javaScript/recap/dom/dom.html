@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="main">
+        <section id="section">
+            <h1 id="title">this is list title </h1>
+            <ul id="list1">
+                <li class="list-item">Lorem ipsum dolor sit.</li>
+                <li class="list-item">Quod libero dignissimos autem!</li>
+                <li id="list-item-1" class="list-item">Quod libero dignissimos autem!</li>
+                <li class="list-item">Omnis veniam alias nulla.</li>
+                <li class="list-item">Praesentium impedit dignissimos ducimus?</li>
+            </ul>
+            <ul id="list2">
+                <li class="list-item">Lorem ipsum dolor sit.</li>
+                <li class="list-item">Quod libero dignissimos autem!</li>
+                <li id="list-item-1" class="list-item">Quod libero dignissimos autem!</li>
+                <li class="list-item">Omnis veniam alias nulla.</li>
+                <li class="list-item">Praesentium impedit dignissimos ducimus?</li>
+            </ul>
+            <ul id="list3">
+                <li class="list-item">Lorem ipsum dolor sit.</li>
+                <li class="list-item">Quod libero dignissimos autem!</li>
+                <li id="list-item-1" class="list-item">Quod libero dignissimos autem!</li>
+                <li class="list-item">Omnis veniam alias nulla.</li>
+                <li class="list-item">Praesentium impedit dignissimos ducimus?</li>
+            </ul>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // access dom element 
+        // 1
+        let title = document.getElementById('title');
+        title.innerText = "just title";
+        console.log(title);
+
+
+        // 2
+        let listItems = document.getElementsByClassName('list-item');
+        console.log(listItems);
+        for (let listItem of listItems) {
+            console.log(listItem);
+        }
+
+
+        // 3 
+        let sections = document.getElementsByTagName('section');
+        for (let section of sections) {
+            console.log(section);
+        }
+
+        // 4
+        let listAllItem = document.querySelectorAll('.list-item')
+        console.log(listAllItem);
+
+        // 5
+        let listfirstItem = document.querySelector('.list-item')
+        console.log(listfirstItem);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

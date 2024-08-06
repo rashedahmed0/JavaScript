@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="section">
+        <ul id="list1">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Ad, eum unde.</li>
+            <li class="item">Reprehenderit, sapiente maiores.</li>
+            <li class="item">Ex, corrupti earum.</li>
+            <li class="item">Rerum, corporis amet?</li>
+        </ul>
+        <ul id="list2">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Cupiditate, eum enim.</li>
+            <li class="item">Harum, vero deleniti.</li>
+            <li class="item">Minus, consequatur obcaecati!</li>
+            <li class="item">Magnam, iure omnis.</li>
+        </ul>
+        <ul id="list3">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Architecto, velit soluta!</li>
+            <li class="item">Voluptas, expedita corporis?</li>
+            <li class="item">Veritatis, ad deserunt.</li>
+            <li class="item">Officia, dolores earum.</li>
+        </ul>
+        <ul id="list4">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Suscipit, ab nam?</li>
+            <li class="item">Quia, dolores itaque.</li>
+            <li class="item">Nisi, animi ullam?</li>
+            <li class="item">Obcaecati, nesciunt beatae?</li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        let section = document.getElementById('section');
+        console.log(section);
+        let ul1 = section.firstElementChild;
+        console.log(ul1);
+        let lastLi = ul1.lastElementChild;
+        console.log('last li is : ', lastLi);
+        let secondLastLi = lastLi.previousElementSibling;
+        console.log('second last li is : ', secondLastLi);
+        let firstLi = ul1.firstElementChild;
+        console.log('first li is : ', firstLi);
+        let secondLi = firstLi.nextElementSibling;
+        console.log('second li is : ', secondLi);
+        let secondLiParent = secondLi.parentElement;
+        console.log('second li parent is : ', secondLiParent);
+        let ulPrent = secondLiParent.parentElement;
+        console.log("ul parent is :", ulPrent);
+
+
+    </script>
+
+</body>
+
+</html>
