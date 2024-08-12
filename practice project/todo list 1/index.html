@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        ul li {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 50px;
+            position: relative;
+            padding-left: 8px;
+            cursor: pointer;
+        }
+
+        ul li::before {
+
+            content: '';
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            position: absolute;
+            top: 14px;
+            left: -30px;
+            background-image: url(./images/unchecked.png);
+            background-size: cover;
+            background-position: center;
+            line-height: 50px;
+
+        }
+
+        .checked {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .checked::before {
+            content: "";
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            position: absolute;
+            top: 14px;
+            left: -30px;
+            background-image: url(./images/checked.png);
+            background-position: center;
+            background-size: cover;
+            line-height: 50px;
+
+
+
+        }
+
+        span {
+            position: absolute;
+            top: 10px;
+            right: 2px;
+            font-size: 25px;
+            background: #ededed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            padding-bottom: 7px;
+            line-height: 50px;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class=" p-10 bg-[black]">
+
+    <div class="flex justify-center pb-5">
+        <section class=" bg-white w-[80%] px-10 py-10">
+            <div class="flex items-center">
+                <h1 class="text-3xl font-bold">Todo <span class="text-[red]">list</span></h1>
+                <img class="w-16" src="./images/icon.png" alt="">
+            </div>
+            <div class="">
+                <input class="bg-slate-100 py-3 px-2 w-[60%] rounded-3xl" type="text" id="input">
+                <button id="btn" class="py-3 px-6 rounded-3xl bg-[red] text-white">Add</button>
+            </div>
+        </section>
+    </div>
+
+
+    <section class=" bg-white w-[80%] mx-auto px-10 py-10">
+        <ul id="list-container">
+            <!-- <li class="checked"> list item 1 <span>x</span></li>
+            <li> list item 2 </li>
+            <li> list item 3 </li>
+            <li> list item 4 </li> -->
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            const input = document.getElementById('input');
+            const inputValue = input.value;
+            const li = document.createElement('li');
+            li.innerText = inputValue;
+            const listContainer = document.getElementById('list-container');
+            listContainer.appendChild(li);
+
+            const span = document.createElement('span');
+            span.innerText = "x";
+            li.appendChild(span)
+
+            input.value = '';
+        })
+        document.getElementById('list-container').addEventListener('click', function (event) {
+            const lis = document.getElementsByTagName('li');
+            for (const li of lis) {
+
+                if (event.target === li) {
+                    li.classList.toggle('checked')
+                }
+
+
+            }
+            const spans = document.getElementsByTagName('span');
+            for (const span of spans) {
+                if (event.target === span) {
+                    span.parentElement.remove()
+                }
+            }
+
+
+        })
+
+    </script>
+</body>
+
+</html>

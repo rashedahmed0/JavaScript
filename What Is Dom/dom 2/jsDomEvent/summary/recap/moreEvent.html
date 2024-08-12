@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>focus event </h1>
+    <input type="text" id="focus-input">
+    <h1>keyup event </h1>
+    <input type="text" id="keyup-input">
+    <h1>mouseOver event </h1>
+    <input type="text" id="mouseOver-input">
+
+
+
+    <script>
+        document.getElementById('focus-input').addEventListener('focus', function () {
+            console.log('focus event is triggered');
+        })
+        document.getElementById('keyup-input').addEventListener('keyup', function () {
+            console.log(event.target.value);
+        })
+        document.getElementById('mouseOver-input').addEventListener('mouseover', function () {
+            console.log('mouseOver event is triggered');
+        })
+    </script>
+</body>
+
+</html>
