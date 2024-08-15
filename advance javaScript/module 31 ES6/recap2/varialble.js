@@ -7,3 +7,6 @@ console.log(name);
 let age = 24;
 age = 25;
 console.log(age);
+
+const PI = '3.1416';
+console.log(PI);
