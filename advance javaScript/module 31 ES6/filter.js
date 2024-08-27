@@ -3,7 +3,7 @@ let evenNumber = (num) => num % 2 === 0;
 let even = numbers.filter(evenNumber)
 console.log(even);
 
-let positiveNumber = (num) => num > 0;
+let positiveNumber = (num) => num > 100;
 console.log(numbers.filter(positiveNumber));
 
 let friends = ["rial", "rashed", "ahmed", "emon"];
