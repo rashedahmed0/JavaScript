@@ -118,3 +118,23 @@ else {
     console.log('value of arr is falsy');
 }
 
+
+
+// check truty and falsy
+
+let x = undefined;
+if (!x) {
+    console.log('x is falsy');
+}
+else {
+    console.log('x is truthy');
+}
+
+let y = true;
+if (!!y) {
+    console.log('y is turthy');
+}
+else {
+    console.log('y is flasy');
+}
+
