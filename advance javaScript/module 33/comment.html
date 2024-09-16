@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="postComment()"> post commet </button>
+    <button onclick="loadComment()"> load commet </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let postComment = () => {
+            fetch('https://jsonplaceholder.typicode.com/comments')
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('error here '))
+        }
+
+        let loadComment = async () => {
+            try {
+                let res = await fetch('https://jsonplaceholder.typicode.com/comments');
+                let data = await res.json();
+                console.log(data);
+            }
+            catch (error) {
+                console.log('error here');
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
