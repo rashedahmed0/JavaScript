@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <div id="search-div" class="w-[90%] mx-auto">
+        <input id="input-field" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <button class="btn btn-accent text-white" onclick="mobileSearch()">Search</button>
+    </div>
+
+    <section id="phone-container" class="grid grid-cols-3">
+    </section>
+
+
+    <dialog id="my_modal_4" class="modal">
+        <div class="modal-box w-[50%] max-w-5xl">
+            <div>
+                <img id="image" src="" alt="">
+            </div>
+            <h3 class="text-lg font-bold" id="title"></h3>
+            <p class="py-4" id="description"></p>
+            <p class="py-4">Storage : <span id="Storage"></span></p>
+            <p class="py-4">Display Size:<span id="Display"></span></p>
+            <p class="py-4">Chipset:<span id="Chipset"></span></p>
+            <p class="py-4">Memory:<span id="Memory"></span></p>
+            <p class="py-4">Slug:<span id="Slug"></span></p>
+            <p class="py-4">Release Date : <span id="Release"></span></p>
+            <div class="modal-action">
+                <form method="dialog" class="text-center">
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <div>
+        <button id="show-all" class="btn btn-accent text-white hidden" onclick="showAllButton()">Show all</button>
+    </div>
+
+    <!-- Ensure the script runs after the DOM is fully loaded -->
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
