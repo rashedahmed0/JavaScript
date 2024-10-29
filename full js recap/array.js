@@ -31,4 +31,4 @@ console.log(arr1);
 arr1.shift()
 console.log(arr1);
 arr1.unshift(1);
-console.log(arr1);
+console.log(arr1); u
