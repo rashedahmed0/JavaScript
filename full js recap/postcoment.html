@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input-field">
+    <button onclick="post()">Post</button>
+    <section id="container">
+
+    </section>
+
+    <script>
+
+        function post() {
+            let input = document.getElementById('input-field');
+            let inputValue = input.value;
+            console.log(inputValue);
+            input.value = ' ';
+            let container = document.getElementById('container');
+            let p = document.createElement('p');
+            p.innerText = inputValue;
+            container.appendChild(p)
+            container.style.padding = '10px'
+            p.style.cursor = 'pointer';
+
+            p.addEventListener('click', function () {
+                container.removeChild(p)
+            })
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

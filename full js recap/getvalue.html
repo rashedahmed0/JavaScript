@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-red {
+            background-color: red;
+        }
+
+        .text-2xl {
+            font-size: 30px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <h1 id="title" class="bg-red , text-2xl text-center ">title this container </h1>
+        <ul id="list-item">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Nam, repudiandae eius?</li>
+            <li class="item">Esse, dolor nesciunt.</li>
+            <li class="item">Quos, veniam repudiandae?</li>
+        </ul>
+    </section>
+
+
+    <script>
+        let h1 = document.getElementById('title');
+        console.log(h1);
+        let valueId = h1.getAttribute('id');
+        console.log(valueId);
+        let valueClass = h1.getAttribute('class')
+        let h1ClassList = h1.classList;
+        h1ClassList.remove('bg-red')
+        h1ClassList.add('blue')
+        console.log(h1ClassList);
+    </script>
+</body>
+
+</html>

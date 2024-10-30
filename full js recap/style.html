@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style</title>
+</head>
+
+<body>
+
+    <button onclick="makePink()">make pink</button>
+    <button id="make-green">make green</button>
+    <button id="make-sky">make sky</button>
+
+    <script>
+        function makePink() {
+            document.body.style.backgroundColor = 'pink';
+
+        }
+        document.getElementById('make-green').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'green';
+        })
+        document.getElementById('make-sky').addEventListener('click', () => {
+            document.body.style.backgroundColor = 'skyBlue'
+        })
+
+    </script>
+</body>
+
+</html>
