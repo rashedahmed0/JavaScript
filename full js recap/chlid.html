@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child parent siblings</title>
+</head>
+
+<body>
+    <section id="container">
+        <h1 id="title">title of this section </h1>
+        <ul id="item-list">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Labore, eius iure!</li>
+            <li class="item">Quaerat, animi architecto.</li>
+            <li class="item">Id, iure ducimus?</li>
+            <li class="item">Enim, aut aliquid!</li>
+        </ul>
+    </section>
+
+
+    <script>
+        let section = document.getElementById('container');
+
+        // 1. child
+        console.log(section);
+        let ul = section.lastElementChild;
+        console.log(ul);
+        let li2st = ul.children[1]
+        console.log(li2st);
+        // let li1st = ul.firstElementChild;
+        // console.log(li1st);
+
+
+        //2. siblings
+        let nextli = li2st.nextElementSibling;
+        console.log(nextli);
+        let preLi = li2st.previousElementSibling;
+        console.log(preLi);
+
+        // 3. parent 
+        let liParent = preLi.parentElement;
+        console.log(liParent);
+        let ulParent = liParent.parentElement;
+        console.log(ulParent);
+
+    </script>
+</body>
+
+</html>
