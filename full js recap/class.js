@@ -29,3 +29,18 @@ let employee1 = new employee('rial', 24, 'dhaka', 25000);
 employee1.about()
 let employee2 = new employee('dinar', 34, 'dhaka', 100000);
 employee2.about()
+
+
+class teacher {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+
+    }
+
+    himSelf() {
+        console.log(`my name is ${this.name} , i am ${this.age} years old`);
+    }
+}
+let teacher1 = new teacher('ismail patahan', 68);
+teacher1.himSelf();
