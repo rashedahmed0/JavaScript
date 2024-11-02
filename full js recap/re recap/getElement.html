@@ -28,6 +28,9 @@
         </ul>
     </section>
 
+    <button id="pink">make pink</button>
+    <button id="tomato">make tomato</button>
+
 
 
 
@@ -38,6 +41,16 @@
 
 
     <script>
+        document.getElementById('tomato').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'tomato'
+        })
+        let pink = document.getElementById('pink');
+        pink.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'pink';
+        })
+
+
+
         console.log(title1);
         // let sections = document.getElementsByTagName('section');
         // for (let section of sections) {
@@ -72,6 +85,7 @@
             input.value = ''
             console.log(input.value);
         })
+
 
 
 
