@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get element</title>
+</head>
+
+<body>
+    <section id="container1">
+        <h1 id="title1">title this container1</h1>
+        <ul id="list1">
+            <li class="item1">Lorem, ipsum dolor.</li>
+            <li class="item1">Quae, quo reprehenderit?</li>
+            <li class="item1">Repudiandae, harum tenetur?</li>
+            <li class="item1">Aperiam, asperiores corporis.</li>
+        </ul>
+    </section>
+    <section id="container2">
+        <h1 id="title2">title this container2</h1>
+        <ul id="list2">
+            <li class="item2">Lorem, ipsum dolor.</li>
+            <li class="item2">Dolorem, quia excepturi!</li>
+            <li class="item2">Aliquam, laboriosam eveniet.</li>
+            <li class="item2">Eaque, dolore eum.</li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let title1 = document.getElementById('title1');
+        console.log(title1);
+        // let sections = document.getElementsByTagName('section');
+        // for (let section of sections) {
+        //     console.log(section.innerHTML);
+
+        // }
+
+        let lis = document.getElementsByClassName('item2');
+        for (let li of lis) {
+            console.log(li);
+
+        }
+
+    </script>
+</body>
+
+</html>
