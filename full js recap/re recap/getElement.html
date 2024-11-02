@@ -19,6 +19,7 @@
     </section>
     <section id="container2">
         <h1 id="title2">title this container2</h1>
+        <input id="input"><button id="btn"> add </button>
         <ul id="list2">
             <li class="item2">Lorem, ipsum dolor.</li>
             <li class="item2">Dolorem, quia excepturi!</li>
@@ -37,7 +38,6 @@
 
 
     <script>
-        let title1 = document.getElementById('title1');
         console.log(title1);
         // let sections = document.getElementsByTagName('section');
         // for (let section of sections) {
@@ -50,6 +50,32 @@
             console.log(li);
 
         }
+
+        // inner text 
+        let title2 = document.getElementById('title2');
+        title2.innerText = 'new li by js'
+
+        let container2 = document.getElementById('container2');
+        let ul = document.createElement('ul');
+        ul.innerHTML = `
+         <li class="item2">Lorem, ipsum dolor.</li>
+            <li class="item2">Dolorem, quia excepturi!</li>
+            <li class="item2">Aliquam, laboriosam eveniet.</li>
+            <li class="item2">Eaque, dolore eum.</li>
+        `;
+        container2.appendChild(ul)
+        document.getElementById('btn').addEventListener('click', function () {
+            let input = document.getElementById('input');
+            let li = document.createElement('li');
+            li.innerText = input.value;
+            ul.appendChild(li);
+            input.value = ''
+            console.log(input.value);
+        })
+
+
+
+
 
     </script>
 </body>
