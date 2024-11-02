@@ -5,11 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>get element</title>
+    <style>
+        .bg-red {
+            background-color: red;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .text-2xl {
+            font-size: 105px;
+        }
+    </style>
 </head>
 
 <body>
     <section id="container1">
-        <h1 id="title1">title this container1</h1>
+        <h1 id="title1" class="bg-red center ">title this container1</h1>
         <ul id="list1">
             <li class="item1">Lorem, ipsum dolor.</li>
             <li class="item1">Quae, quo reprehenderit?</li>
@@ -41,6 +55,24 @@
 
 
     <script>
+        // get value of id and clss
+        let title1 = document.getElementById('title1');
+        let getClass = title1.getAttribute('class')
+        console.log(getClass);
+        let getId = title1.getAttribute('id');
+        console.log(getId);
+        let classes = title1.classList;
+        let addClass = classes.add('text-2xl')
+        let removeClass = classes.remove('bg-red');
+        console.log(classes);
+        let removeAttribute = title1.removeAttribute('class')
+        let setAttribute = title1.setAttribute('class', true)
+
+
+
+
+
+
         document.getElementById('tomato').addEventListener('click', function () {
             document.body.style.backgroundColor = 'tomato'
         })
@@ -49,9 +81,9 @@
             document.body.style.backgroundColor = 'pink';
         })
 
-
-
         console.log(title1);
+
+
         // let sections = document.getElementsByTagName('section');
         // for (let section of sections) {
         //     console.log(section.innerHTML);
