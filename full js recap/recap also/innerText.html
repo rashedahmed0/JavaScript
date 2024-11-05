@@ -23,6 +23,8 @@
         <input type="text" id="field">
         <button id="btn">post</button>
 
+        <button id="pink">make pink</button>
+        <button onclick="makeGreen()">make green</button>
     </div>
 
 
@@ -32,9 +34,13 @@
 
 
     <script>
-
+        let makeGreen = () => document.body.style.backgroundColor = 'green'
+        document.getElementById('pink').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'pink'
+        })
         let container = document.getElementById('container');
         console.log(container);
+        container.style.padding = '10px'
 
         document.getElementById('btn').addEventListener('click', function () {
             let field = document.getElementById('field');
