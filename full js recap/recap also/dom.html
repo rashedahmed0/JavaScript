@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+
+<body>
+    <section id="container">
+        <h1 id="title1">title this container </h1>
+        <ul id="list">
+            <li class="item">Lorem ipsum dolor sit.</li>
+            <li class="item">Assumenda laboriosam in recusandae.</li>
+            <li class="item">Vel saepe odio labore.</li>
+            <li class="item">Quisquam provident assumenda perferendis?</li>
+            <li class="item">Voluptatem doloribus non repellendus!</li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+    <script>
+
+        // get element 
+        let title = document.getElementById('title1');
+        title.innerText = 'new header add by js'
+        console.log(title);
+
+        let lis = document.getElementsByClassName('item');
+        for (let li of lis) {
+            // console.log(li);
+        }
+        let tag = document.getElementsByTagName('li');
+        // console.log(tag);
+        for (let li of tag) {
+            // console.log(li);
+        }
+        let selectorAll = document.querySelectorAll('.item');
+        // console.log(selectorAll);
+        for (let li of selectorAll) {
+            // console.log(li);
+
+        }
+        let selector = document.querySelector('li');
+        console.log(selector);
+    </script>
+</body>
+
+</html>
