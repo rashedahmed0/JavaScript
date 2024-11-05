@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bg-red {
+            background-color: red;
+
+        }
+
+        .center {
+            text-align: center;
+
+        }
+
+        .text-2xl {
+            font-size: 40px;
+        }
+    </style>
 </head>
 
 <body>
     <div id="container">
 
         <section id="section1">
-            <h1 id="title1">title this container </h1>
+            <h1 id="title1" class="bg-red center ">title this container </h1>
             <ul id="list">
                 <li class="item">Lorem ipsum dolor sit.</li>
                 <li class="item">Assumenda laboriosam in recusandae.</li>
@@ -36,6 +51,20 @@
     </div>
 
     <script>
+        let title = document.getElementById('title1');
+        let titleClasslist = title.classList;
+        title.classList.add('text-2xl');
+        title.classList.remove('bg-red')
+        console.log(titleClasslist);
+        title.removeAttribute('class')
+
+
+        let titleIdValue = title.getAttribute('id');
+        console.log(titleIdValue);
+        let titleClassValue = title.getAttribute('class');
+        console.log(titleClassValue);
+
+
         let section1 = document.getElementById('section1')
         let sectionLastChild = section1.lastElementChild;
         console.log(sectionLastChild);
