@@ -20,6 +20,14 @@
                 <li class="item">Voluptatem doloribus non repellendus!</li>
             </ul>
         </section>
+
+
+
+
+
+
+
+
         <input type="text" id="field">
         <button id="btn">post</button>
 
@@ -27,13 +35,29 @@
         <button onclick="makeGreen()">make green</button>
     </div>
 
-
-
-
-
-
-
     <script>
+        let section1 = document.getElementById('section1')
+        let sectionLastChild = section1.lastElementChild;
+        console.log(sectionLastChild);
+        // let firstLi = sectionLastChild.firstElementChild;
+        let secondLi = sectionLastChild.children[1];
+
+        let nextSib = secondLi.nextElementSibling;
+        console.log(nextSib);
+        // console.log(firstLi);
+        console.log(secondLi);
+        let previousSib = secondLi.previousElementSibling;
+        console.log(previousSib);
+
+
+
+
+
+
+
+
+
+
         let makeGreen = () => document.body.style.backgroundColor = 'green'
         document.getElementById('pink').addEventListener('click', function () {
             document.body.style.backgroundColor = 'pink'
