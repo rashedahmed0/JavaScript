@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <section id="section1">
+            <h1 id="title1">title this container </h1>
+            <ul id="list">
+                <li class="item">Lorem ipsum dolor sit.</li>
+                <li class="item">Assumenda laboriosam in recusandae.</li>
+                <li class="item">Vel saepe odio labore.</li>
+                <li class="item">Quisquam provident assumenda perferendis?</li>
+                <li class="item">Voluptatem doloribus non repellendus!</li>
+            </ul>
+        </section>
+        <input type="text" id="field">
+        <button id="btn">post</button>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+        let container = document.getElementById('container');
+        console.log(container);
+
+        document.getElementById('btn').addEventListener('click', function () {
+            let field = document.getElementById('field');
+            let fieldValue = field.value;
+
+            let p = document.createElement('p');
+            p.innerText = fieldValue;
+            container.appendChild(p);
+            field.value = ' ';
+
+        })
+        let sections2 = document.createElement('section');
+        sections2.innerHTML = `
+        <h1 id="title">title this container </h1>
+            <ul id="list">
+                <li class="item">Lorem ipsum dolor sit.</li>
+                <li class="item">Assumenda laboriosam in recusandae.</li>
+                <li class="item">Vel saepe odio labore.</li>
+                <li class="item">Quisquam provident assumenda perferendis?</li>
+                <li class="item">Voluptatem doloribus non repellendus!</li>
+            </ul>
+        `;
+        container.appendChild(sections2);
+        let title1 = document.getElementById('title1');
+        title1.innerText = 'hi this is new title ';
+
+    </script>
+</body>
+
+</html>
