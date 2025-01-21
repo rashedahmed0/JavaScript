@@ -23,3 +23,11 @@ for (let i = 0; i < keys.length; i++) {
 for (let person in persons) {
     console.log(persons[person]);
 }
+
+let number = [1, 2, 3, 4, 5, 7, 8];
+
+let forE = number.forEach((n) => console.log(n));
+let forM = number.map(n => n + 2);
+console.log(forM);
+let forFilter = number.filter(n => n % 2 === 0);
+console.log(forFilter);
