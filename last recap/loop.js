@@ -10,3 +10,16 @@ for (let number of numbers) {
     // console.log(number);
 }
 
+let persons = {
+    name: 'rial',
+    age: 24
+}
+let keys = Object.keys(persons)
+for (let i = 0; i < keys.length; i++) {
+    let element = keys[i];
+
+    console.log(element, persons[element]);
+}
+for (let person in persons) {
+    console.log(persons[person]);
+}
