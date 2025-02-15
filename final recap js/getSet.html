@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-red {
+            background-color: red;
+        }
+
+        .text-white {
+            color: white;
+
+        }
+
+        .padding-margin {
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="tour">
+        <ul id="tourList">
+            <li class="place">Lorem, ipsum dolor.</li>
+            <li id="listPlace" class="place bg-red text-white">Rerum, quo nisi.</li>
+            <li class="place">Sit, officia corporis.</li>
+        </ul>
+        <button id="btn">
+            click me
+        </button>
+    </section>
+
+
+    <script>
+        let section = document.getElementById('tour');
+
+        let getId = section.getAttribute('id');
+        console.log("section's id is : ", getId);
+        let listPlace = document.getElementById('listPlace');
+        let getPlaceClass = listPlace.getAttribute('class')
+        console.log("place's clss is :", getPlaceClass);
+        let placeClassList = listPlace.classList;
+        console.log(placeClassList);
+        placeClassList.remove('text-white');
+        console.log(placeClassList);
+        placeClassList.add('padding-margin');
+        console.log(placeClassList);
+        let btn = document.getElementById("btn");
+        btn.setAttribute('disabled', 'true')
+
+    </script>
+</body>
+
+</html>
