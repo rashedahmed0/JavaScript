@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom </title>
+</head>
+
+<body>
+    <section id="section1">
+        <ul id="list1">
+            <h1 id="heading1">heading this list</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Consequuntur, cupiditate consequatur!</li>
+            <li class="item">Quae, quidem impedit?</li>
+            <li class="item">Eius, accusamus voluptates!</li>
+            <li class="item">Voluptatem, nulla labore.</li>
+        </ul>
+        <ul id="list2">
+            <h1 id="heading2">heading this list</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Autem, commodi necessitatibus!</li>
+            <li class="item">Autem, laborum exercitationem.</li>
+            <li class="item">Debitis, nihil illo.</li>
+            <li class="item">Corrupti, sunt tenetur?</li>
+        </ul>
+    </section>
+    <section id="section2">
+        <ul id="list1">
+            <h1 id="heading1">heading this list</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Alias, vero soluta?</li>
+            <li class="item">Quae, delectus. Adipisci!</li>
+            <li class="item">Rem, ea voluptates.</li>
+            <li class="item">Adipisci, fugiat repudiandae.</li>
+        </ul>
+        <ul id="list2">
+            <h1 id="heading2">heading this list</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Obcaecati, eveniet expedita?</li>
+            <li class="item">Dolor, dicta autem.</li>
+            <li class="item">Mollitia, illum quae.</li>
+            <li class="item">Ut, dicta nulla.</li>
+        </ul>
+    </section>
+    <section id="section3">
+        <ul id="list1">
+            <h1 id="heading1">heading this list</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Repellendus, dolore magni.</li>
+            <li class="item">Possimus, ipsum corporis.</li>
+            <li class="item">Quia, officia cupiditate?</li>
+            <li class="item">Voluptas, cumque error.</li>
+        </ul>
+        <ul id="list2">
+            <h1 id="heading2">heading this list</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Id, voluptatum nihil?</li>
+            <li class="item">Exercitationem, adipisci facilis.</li>
+            <li class="item">Quisquam, tenetur! Ea?</li>
+            <li class="item">Est, alias dicta?</li>
+        </ul>
+    </section>
+
+
+
+
+
+
+    <script>
+
+
+        // let sections = document.getElementsByTagName('section');
+
+        // for (let section of sections) {
+        //     console.log(section);
+        // }
+        // let list = document.getElementById("list1");
+        // console.log(list);
+        // let items = document.getElementsByClassName('item')
+        // for (let item of items) {
+        //     let itemText = item.innerText;
+        //     console.log(itemText);
+        // }
+        // let allHeadings = document.querySelectorAll("h1");
+        // for (let heading of allHeadings) {
+        //     console.log(heading);
+        // }
+        // let firstHeading = document.querySelector('h1');
+        // console.log(firstHeading);
+
+        let firstItem = document.querySelector('.item');
+        console.log(firstItem);
+        let liParent = firstItem.parentElement;
+        console.log(liParent);
+        let childs = liParent.children;
+        for (let child of childs) {
+            console.log(child);
+        };
+        let lastElemet = liParent.lastElementChild;
+        console.log(lastElemet);
+        let firstElement = liParent.firstElementChild;
+        console.log(firstElement);
+
+        let PreviousSibling = lastElemet.previousElementSibling;
+        console.log(PreviousSibling);
+        let nextSibling = firstElement.nextElementSibling;
+        console.log(nextSibling);
+        PreviousSibling.style.color = 'white';
+        PreviousSibling.style.fontSize = '30px';
+        PreviousSibling.style.backgroundColor = 'red';
+        PreviousSibling.style.padding = '15px ';
+        PreviousSibling.style.borderRadius = '8px';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let element = document.getElementById('heading1');
+        // element = element.className;
+        // element = element.childNodes;
+        // element = element.parentNode;
+        // element.style.color = 'red';
+        // element.innerText = 'heading this list';
+        // console.log(element);
+
+
+    </script>
+</body>
+
+</html>
